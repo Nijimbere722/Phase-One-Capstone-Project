@@ -41,48 +41,69 @@
   </section>
 
   <main class="max-w-7xl mx-auto px-4 pb-20 mt-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book1.png" alt="Modern Web Design" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Modern Web Design</h3>
-          <p class="text-gray-500 text-sm italic">Monia Nijimbere</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book2.jpg" alt="Learning Python" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Learning Python</h3>
-          <p class="text-gray-500 text-sm italic">Dominic Kwizera</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book3.jpg" alt="Mathematics 101" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Mathematics 101</h3>
-          <p class="text-gray-500 text-sm italic">Cheilla Akimana</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book4.jpg" alt="Database Systems" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Database Systems</h3>
-          <p class="text-gray-500 text-sm italic">Christophe Niyonkuru</p>
-        </div>
-      </div>
-
+    <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition p-4">
+      <img src="Book1.png" alt="Modern Web Design" class="w-full h-64 object-cover rounded mb-4">
+      <h3 class="font-bold text-lg">Modern Web Design</h3>
+      <p class="text-gray-500 text-sm italic mb-4">Monia Nijimbere</p>
+      <button class="add-btn w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              data-id="1" 
+              data-title="Modern Web Design" 
+              data-author="Monia Nijimbere" 
+              data-img="Book1.png">
+        Add to Favorites
+      </button>
     </div>
-  </main>
+
+    <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition p-4">
+      <img src="Book2.jpg" alt="Learning Python" class="w-full h-64 object-cover rounded mb-4">
+      <h3 class="font-bold text-lg">Learning Python</h3>
+      <p class="text-gray-500 text-sm italic mb-4">Dominic Kwizera</p>
+      <button class="add-btn w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              data-id="2" 
+              data-title="Learning Python" 
+              data-author="Dominic Kwizera" 
+              data-img="Book2.jpg">
+        Add to Favorites
+      </button>
+    </div>
+
+    <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition p-4">
+      <img src="Book3.jpg" alt="Mathematics 101" class="w-full h-64 object-cover rounded mb-4">
+      <h3 class="font-bold text-lg">Mathematics 101</h3>
+      <p class="text-gray-500 text-sm italic mb-4">Cheilla Akimana</p>
+      <button class="add-btn w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              data-id="3" 
+              data-title="Mathematics 101" 
+              data-author="Cheilla Akimana" 
+              data-img="Book3.jpg">
+        Add to Favorites
+      </button>
+    </div>
+
+    <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition p-4">
+      <img src="Book4.jpg" alt="Database Systems" class="w-full h-64 object-cover rounded mb-4">
+      <h3 class="font-bold text-lg">Database Systems</h3>
+      <p class="text-gray-500 text-sm italic mb-4">Christophe Niyonkuru</p>
+      <button class="add-btn w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              data-id="4" 
+              data-title="Database Systems" 
+              data-author="Christophe Niyonkuru" 
+              data-img="Book4.jpg">
+        Add to Favorites
+      </button>
+    </div>
+
+  </div>
+</main>
 
   <footer class="bg-gray-900 text-white py-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-gray-400">© 2026 Book Explorer Capstone. Built with Tailwind CSS.</p>
     </div>
   </footer>
+  <script type="module" src="main.js"></script>
 
 </body>
 </html>
