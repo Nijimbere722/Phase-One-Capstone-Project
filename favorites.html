@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorites - Book Explorer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">Book Explorer</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="favorites.html" class="text-blue-600 font-bold">Favorites</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="text-center py-16 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+    <h2 class="text-4xl font-bold mb-4">Your Favorite Books</h2>
+    <p class="text-lg max-w-2xl mx-auto opacity-90">
+      All the books you love in one place ❤️
+    </p>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    
+    <div id="favoritesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="bg-white rounded-lg shadow border border-gray-100 overflow-hidden opacity-60">
+        <div class="bg-gray-200 h-64 flex items-center justify-center text-gray-400">
+          <span class="italic text-sm">Saved Book Placeholder</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-gray-400">Book Title</h3>
+          <p class="text-gray-300 text-sm">Author Name</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow border border-gray-100 overflow-hidden opacity-60">
+        <div class="bg-gray-200 h-64 flex items-center justify-center text-gray-400">
+          <span class="italic text-sm">Saved Book Placeholder</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-gray-400">Book Title</h3>
+          <p class="text-gray-300 text-sm">Author Name</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="emptyState" class="text-center mt-12 border-t pt-10">
+      <p class="text-gray-500 text-lg mb-4">
+        This is where your favorite books will appear once added!
+      </p>
+    </div>
+
+  </section>
+
+  <footer class="bg-gray-900 text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-gray-400">© 2026 Book Explorer. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
