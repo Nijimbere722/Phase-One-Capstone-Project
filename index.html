@@ -3,86 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Explorer - Phase 1 Capstone</title>
-
+  <title>Book Explorer</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-100 text-gray-800">
 
+  <!-- Navbar -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">Book Explorer</h1>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">Book Explorer</h1>
       <div class="space-x-6">
-        <a href="index.html" class="font-medium text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="favorites.html" class="hover:text-blue-600 transition">Favorites</a>
+        <a href="index.html" class="font-medium text-indigo-600">Home</a>
+        <a href="about.html" class="hover:text-indigo-600 transition">About</a>
+        <a href="favorites.html" class="hover:text-indigo-600 transition">Favorites</a>
       </div>
     </div>
   </nav>
 
-  <header class="text-center py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+  <!-- Hero Section -->
+  <header class="text-center py-24 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Discover Your Next Favorite Book
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Discover Popular Books
       </h2>
-      <p class="text-lg mb-8 opacity-90">
-        Browse our curated collection of books and build your personal library[cite: 13]. 
+      <p class="text-lg opacity-80">
+        Explore real-time popular fiction books powered by Open Library API.
       </p>
-      <a href="#popular-books" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
-        Browse Library
-      </a>
     </div>
   </header>
 
-  <section id="popular-books" class="max-w-7xl mx-auto px-4 pt-16 pb-4">
-    <h2 class="text-3xl font-bold text-gray-900">Popular Books</h2>
-    <div class="h-1 w-20 bg-blue-600 mt-2"></div>
-  </section>
+  <!-- Search Bar -->
+  <div class="max-w-3xl mx-auto px-4 my-10">
+    <form id="searchForm" class="flex justify-center gap-3">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search books by title..."
+        class="w-2/3 px-5 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      >
+      <button 
+        type="submit" 
+        class="bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition shadow-md"
+      >
+        Search
+      </button>
+    </form>
+  </div>
 
-  <main class="max-w-7xl mx-auto px-4 pb-20 mt-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+  <!-- Books Section -->
+  <main class="max-w-7xl mx-auto px-6 pb-24">
 
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book1.png" alt="Modern Web Design" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Modern Web Design</h3>
-          <p class="text-gray-500 text-sm italic">Monia Nijimbere</p>
-        </div>
-      </div>
+    <h3 class="text-2xl font-semibold mb-8 text-gray-700 text-center">
+      Popular Fiction Books
+    </h3>
 
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book2.jpg" alt="Learning Python" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Learning Python</h3>
-          <p class="text-gray-500 text-sm italic">Dominic Kwizera</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book3.jpg" alt="Mathematics 101" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Mathematics 101</h3>
-          <p class="text-gray-500 text-sm italic">Cheilla Akimana</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
-        <img src="Book4.jpg" alt="Database Systems" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg">Database Systems</h3>
-          <p class="text-gray-500 text-sm italic">Christophe Niyonkuru</p>
-        </div>
-      </div>
-
+    <!-- Dynamic Books Grid -->
+    <div 
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" 
+      id="booksGrid"
+    >
+      <!-- Books will load dynamically here -->
     </div>
+
   </main>
 
-  <footer class="bg-gray-900 text-white py-10">
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
-      <p class="text-gray-400">© 2026 Book Explorer Capstone. Built with Tailwind CSS.</p>
+      <p class="text-gray-400">
+        © 2026 Book Explorer. Powered by Open Library API.
+      </p>
     </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="main.js"></script>
 
 </body>
 </html>
